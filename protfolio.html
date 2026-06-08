@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Engineer | Portfolio</title>
+  <link rel="stylesheet" href="protfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text" id="loaderText"></div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">DevOps</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link" data-text="Home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+      <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>Available for hire</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag reveal">
+        <span class="tag-icon">▶</span> Fresher DevOps Engineer
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-up" style="--delay:0.1s">Building</span>
+        <span class="title-line accent reveal-up" style="--delay:0.2s">Pipelines.</span>
+        <span class="title-line reveal-up" style="--delay:0.3s">Deploying</span>
+        <span class="title-line accent reveal-up" style="--delay:0.4s">Futures.</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay:0.5s">
+        I automate infrastructure, containerize applications, and build CI/CD pipelines that ship code faster and smarter.
+      </p>
+      <div class="hero-cta reveal-up" style="--delay:0.6s">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Hire Me</a>
+      </div>
+      <div class="hero-terminal reveal-up" style="--delay:0.7s">
+        <div class="terminal-bar">
+          <span class="t-dot" style="background:#ff5f57"></span>
+          <span class="t-dot" style="background:#ffbd2e"></span>
+          <span class="t-dot" style="background:#28c840"></span>
+          <span class="t-title">bash ~ pipeline</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="t-prompt">$</span> <span class="t-cmd" id="termCmd"></span><span class="t-cursor">█</span></p>
+          <p class="t-output" id="termOutput"></p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="orbit-ring ring-3"></div>
+      <div class="center-icon">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="6 3"/>
+          <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="28" fill="var(--accent)">⚙</text>
+        </svg>
+      </div>
+      <div class="orbit-icon icon-1">🐳</div>
+      <div class="orbit-icon icon-2">☁️</div>
+      <div class="orbit-icon icon-3">🔧</div>
+      <div class="orbit-icon icon-4">🚀</div>
+      <div class="orbit-icon icon-5">📦</div>
+      <div class="orbit-icon icon-6">🔁</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>01 // About Me</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal-up">The Engineer<br/><span class="accent">Behind the Ops</span></h2>
+          <p class="about-desc reveal-up" style="--delay:0.1s">
+            I'm a fresher DevOps Engineer based in <strong>Islamabad, Pakistan</strong>, passionate about bridging the gap between development and operations. I thrive on automation, scalability, and building systems that just work — at any scale.
+          </p>
+          <p class="about-desc reveal-up" style="--delay:0.2s">
+            My journey started with Linux fundamentals, and I've since built a solid foundation across containerization, cloud infrastructure, and CI/CD workflows. Every pipeline I build is a step toward faster, more reliable software delivery.
+          </p>
+          <div class="about-stats reveal-up" style="--delay:0.3s">
+            <div class="stat-item">
+              <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="8">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Tools Mastered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Dedication</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card reveal-up" style="--delay:0.2s">
+          <div class="card-glow"></div>
+          <div class="about-info-card">
+            <h3 class="card-title">Quick Info</h3>
+            <ul class="info-list">
+              <li><span class="info-key">📍 Location</span><span class="info-val">Islamabad, PK</span></li>
+              <li><span class="info-key">💼 Status</span><span class="info-val green">Open to Work</span></li>
+              <li><span class="info-key">🎯 Focus</span><span class="info-val">DevOps & Cloud</span></li>
+              <li><span class="info-key">🛠 Expertise</span><span class="info-val">Docker · AWS · CI/CD</span></li>
+              <li><span class="info-key">🌐 Lang</span><span class="info-val">English · Urdu</span></li>
+              <li><span class="info-key">📚 Learning</span><span class="info-val">Kubernetes · Terraform</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary full-btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>02 // Tech Stack</span>
+      </div>
+      <h2 class="section-title centered reveal-up">Tools I Work With</h2>
+
+      <div class="skills-categories">
+
+        <div class="skill-cat reveal-up" style="--delay:0.1s">
+          <div class="cat-header">
+            <span class="cat-icon">🐧</span>
+            <h3>Linux & Shell</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">Linux (Ubuntu/CentOS)</div>
+            <div class="skill-pill">Bash Scripting</div>
+            <div class="skill-pill">Shell Automation</div>
+            <div class="skill-pill">Cron Jobs</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.15s">
+          <div class="cat-header">
+            <span class="cat-icon">🐳</span>
+            <h3>Containers</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill active">Docker</div>
+            <div class="skill-pill active">Docker Compose</div>
+            <div class="skill-pill">Kubernetes (Learning)</div>
+            <div class="skill-pill">Container Registries</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.2s">
+          <div class="cat-header">
+            <span class="cat-icon">☁️</span>
+            <h3>Cloud (AWS)</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill active">EC2</div>
+            <div class="skill-pill active">S3</div>
+            <div class="skill-pill active">IAM</div>
+            <div class="skill-pill">VPC</div>
+            <div class="skill-pill">Route 53</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.25s">
+          <div class="cat-header">
+            <span class="cat-icon">🔁</span>
+            <h3>CI/CD</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill active">GitHub Actions</div>
+            <div class="skill-pill">Jenkins</div>
+            <div class="skill-pill">GitLab CI</div>
+            <div class="skill-pill">Pipeline Design</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.3s">
+          <div class="cat-header">
+            <span class="cat-icon">🏗</span>
+            <h3>IaC</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">Terraform (Learning)</div>
+            <div class="skill-pill">AWS CloudFormation</div>
+            <div class="skill-pill">Ansible</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.35s">
+          <div class="cat-header">
+            <span class="cat-icon">🔀</span>
+            <h3>Version Control</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill active">Git</div>
+            <div class="skill-pill active">GitHub</div>
+            <div class="skill-pill">GitFlow</div>
+            <div class="skill-pill">Code Reviews</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.4s">
+          <div class="cat-header">
+            <span class="cat-icon">🐍</span>
+            <h3>Scripting</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill active">Python</div>
+            <div class="skill-pill">YAML</div>
+            <div class="skill-pill">JSON</div>
+            <div class="skill-pill">Markdown</div>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--delay:0.45s">
+          <div class="cat-header">
+            <span class="cat-icon">📊</span>
+            <h3>Monitoring</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">Prometheus</div>
+            <div class="skill-pill">Grafana</div>
+            <div class="skill-pill">AWS CloudWatch</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pipeline Animation -->
+      <div class="pipeline-section reveal-up" style="--delay:0.1s">
+        <h3 class="pipeline-title">CI/CD Pipeline Flow</h3>
+        <div class="pipeline">
+          <div class="pipe-step active">
+            <div class="pipe-icon">📝</div>
+            <div class="pipe-label">Code Commit</div>
+          </div>
+          <div class="pipe-arrow"><div class="arrow-fill"></div></div>
+          <div class="pipe-step">
+            <div class="pipe-icon">🔍</div>
+            <div class="pipe-label">Code Review</div>
+          </div>
+          <div class="pipe-arrow"><div class="arrow-fill"></div></div>
+          <div class="pipe-step">
+            <div class="pipe-icon">🧪</div>
+            <div class="pipe-label">Automated Tests</div>
+          </div>
+          <div class="pipe-arrow"><div class="arrow-fill"></div></div>
+          <div class="pipe-step">
+            <div class="pipe-icon">🐳</div>
+            <div class="pipe-label">Docker Build</div>
+          </div>
+          <div class="pipe-arrow"><div class="arrow-fill"></div></div>
+          <div class="pipe-step">
+            <div class="pipe-icon">☁️</div>
+            <div class="pipe-label">Deploy to AWS</div>
+          </div>
+          <div class="pipe-arrow"><div class="arrow-fill"></div></div>
+          <div class="pipe-step">
+            <div class="pipe-icon">📊</div>
+            <div class="pipe-label">Monitor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>03 // Projects</span>
+      </div>
+      <h2 class="section-title centered reveal-up">What I've Built</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" style="--delay:0.1s">
+          <div class="project-top">
+            <div class="project-num">01</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="proj-link" title="Live">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Dockerized MERN Stack App</h3>
+          <p class="project-desc">Containerized a full-stack application using Docker & Docker Compose with separate containers for MongoDB, Express, React, and Node. Configured networks, volumes, and health checks.</p>
+          <div class="project-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">Docker Compose</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--delay:0.2s">
+          <div class="project-top">
+            <div class="project-num">02</div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-name">GitHub Actions CI/CD Pipeline</h3>
+          <p class="project-desc">Built an automated CI/CD pipeline using GitHub Actions. Includes automated testing, Docker image build & push to Docker Hub, and deployment to AWS EC2 on every push to main.</p>
+          <div class="project-tags">
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Docker Hub</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">YAML</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--delay:0.3s">
+          <div class="project-top">
+            <div class="project-num">03</div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-name">AWS Infrastructure Automation</h3>
+          <p class="project-desc">Provisioned a 3-tier AWS architecture (EC2, RDS, S3) using AWS CLI and shell scripts. Configured IAM roles, security groups, VPC subnets and an Application Load Balancer.</p>
+          <div class="project-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Bash</span>
+            <span class="tag">IAM</span>
+            <span class="tag">VPC</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--delay:0.4s">
+          <div class="project-top">
+            <div class="project-num">04</div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+              <a href="#" class="proj-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-name">Linux Server Monitoring Script</h3>
+          <p class="project-desc">Python + Bash script that monitors CPU, RAM, disk usage & sends email alerts via SMTP when thresholds are exceeded. Deployed as a cron job on an Ubuntu server.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Cron</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>04 // Contact</span>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="section-title reveal-up">Let's Work<br/><span class="accent">Together</span></h2>
+          <p class="contact-desc reveal-up" style="--delay:0.1s">
+            I'm actively looking for my first DevOps role. If you're hiring or want to collaborate on something interesting, let's talk.
+          </p>
+          <div class="contact-links reveal-up" style="--delay:0.2s">
+            <a href="mailto:your@email.com" class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <span class="ci-label">Email</span>
+                <span class="ci-val">sarfysarfraz@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-item">
+              <span class="contact-icon">💼</span>
+              <div>
+                <span class="ci-label">LinkedIn</span>
+                <span class="ci-val">linkedin.com/in/sarfraz-sarfy-38a736348</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-item">
+              <span class="contact-icon">🐙</span>
+              <div>
+                <span class="ci-label">GitHub</span>
+                <span class="ci-val">github.com/sarfrazmalik786</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-up" style="--delay:0.2s">
+          <div class="form-card">
+            <div class="form-glow"></div>
+            <input type="text" class="form-input" placeholder="Sarfraz Rasheed" id="fname"/>
+            <input type="email" class="form-input" placeholder="sarfysarfraz@gmail.com" id="femail"/>
+            <textarea class="form-input form-textarea" placeholder="Your Message" id="fmessage"></textarea>
+            <button class="btn btn-primary full-btn" id="sendBtn">
+              <span id="sendBtnText">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>DevOps<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">© 2025 · Built with ❤️ · Open to opportunities</p>
+      <div class="footer-top-btn" id="topBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+      </div>
+    </div>
+  </footer>
+
+  <script src="protfolio.js"></script>
+</body>
+</html>
